@@ -1,9 +1,7 @@
 n = input('');
 rng(get_r());
 arr = randi(10, n, 1);
-fprintf('11401\n')
-fprintf('Alexander\n')
-fprintf('Pliskin\n')
+print_info();
 fprintf('%d\n', n);
 fprintf('%d ', arr)
 res = 0;
