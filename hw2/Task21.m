@@ -13,7 +13,7 @@ function [ T ] = Task21( )
         1 0 0 0;
         0 0 0 1];
     T3 = T;
-    trplot(T0, 'frame', 1, 'color', 'r', 'axis', [-8, 8, -8, 8, -8, 8]);
+    trplot(T0, 'frame', 1, 'color', 'r', 'axis', [-1, 5, 0, 6, -4, 2]);
     hold on;
     trplot(T1, 'frame', 1, 'color', 'g');
     trplot(T1*T12, 'frame', 1, 'color', 'b');

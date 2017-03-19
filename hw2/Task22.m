@@ -2,10 +2,7 @@ function [ T ] = Task22()
     alpha = 2*pi/3;
     T = transl(3 + 2.8*cos(pi-alpha), 1, -2.8*sin(pi-alpha))*troty(pi/2-alpha);
     
-    T0 = [1 0 0 0;
-        0 1 0 0;
-        0 0 1 0;
-        0 0 0 1];
+    T0 = eye(4);
     
     T1 = [cos(alpha) -sin(alpha) 0 3-3*cos(alpha);
         0 0 -1 2;
