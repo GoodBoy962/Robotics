@@ -1,4 +1,5 @@
 function [ T ] = Task22()
+%   set any value for alpha
     alpha = 2*pi/3;
     T = transl(3 + 2.8*cos(pi-alpha), 1, -2.8*sin(pi-alpha))*troty(pi/2-alpha);
     
