@@ -10,4 +10,4 @@ R = SerialLink(l, 'name', 'Figure');
 
 R.plot([0,1,2,3,4,5,6],'workspace', [-60 120 -120 30 -60 120]);
 
-R.teach('approach',[pi/4-pi/2,pi/18,pi/180*25+pi/2,pi/2,pi/3-pi/2,0+pi/2,0])
+R.teach('approach',[pi/4-pi/2,pi/18,pi/180*25+pi/2,pi/2,pi/3-pi/2,0+pi/2,0]);
