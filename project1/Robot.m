@@ -7,6 +7,9 @@ l(6) = Link([0,0,0,0,0]);
 
 R = SerialLink(l, 'name', 'Robot');
 
+%DH table
+disp(R.char);
+
 R.plot([0,1,2,3,4,5], 'workspace', [-5,5,-5,5,-5,5]);
 
 
