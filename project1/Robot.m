@@ -10,6 +10,6 @@ R = SerialLink(l, 'name', 'Robot');
 %DH table
 disp(R.char);
 
-R.plot([0,1,2,3,4,5], 'workspace', [-5,5,-5,5,-5,5]);
+R.plot([0,1,2,3,4,5], 'workspace', [-10,10,-10,10,-10,10]);
 
 
