@@ -9,6 +9,10 @@ l(6) = Link([0, 0, 0, pi/2, 0]);
 l(7) = Link([0, 0, 0, 0, 1]);
 l(8) = Link([0, 0, 0, 0, 0]);
 
+l(1).qlim = [0, 5];
+l(4).qlim = [0, 5];
+l(7).qlim = [0, 5];
+
 Robot = SerialLink(l, 'name', 'Robot');
 
 end
