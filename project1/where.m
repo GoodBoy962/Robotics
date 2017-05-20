@@ -1,4 +1,6 @@
-function [transform_matrix]=where(Robot, angles, extensions)
+function [transform_matrix]=where(angles, extensions)
+
+Robot = getRobot();
 
 links = Robot.links;
 thetas = [];
