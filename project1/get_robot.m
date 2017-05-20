@@ -1,4 +1,4 @@
-function [ Robot ] = getRobot()
+function [ Robot ] = get_robot()
 
 l(1) = Link([0, 0, 0, 0, 1]);
 l(2) = Link([0, 1, 0, -pi/2, 0]);

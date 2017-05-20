@@ -1,6 +1,6 @@
 function [transform_matrix]=where(angles, extensions)
 
-Robot = getRobot();
+Robot = get_robot();
 
 links = Robot.links;
 thetas = [];
