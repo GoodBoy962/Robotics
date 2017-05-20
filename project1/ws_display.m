@@ -19,7 +19,11 @@ traj1=jtraj(q0,q1,t);
 % traj5=jtraj(q4,q5,t);
 % traj6=jtraj(q5,q0,t);
 
-R.plot(traj1)
+% R.links(1).qlim = [0, 2];
+% R.links(4).qlim = [0, 2];
+% R.links(7).qlim = [0, 2];
+
+R.plot(traj1, 'workspace', [-10,10,-10,10,-10,10])
 
 end
 
