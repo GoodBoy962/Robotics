@@ -1,31 +1,31 @@
-function [ ] = ws_display(extensions)
+function [ ] = ws_display( )
 
-R = get_robot();
-
-% length of joints
-l1 = extensions(1);
-l4 = extensions(2);
-l7 = extensions(7);
-
-l2 = R.links(2);
-l3 = R.links(3);
-l5 = R.links(5);
-l6 = R.links(6);
-l8 = R.links(8);
-
-% thetas possible values
-theta1 = 0;
-theta4 = 0;
-theta7 = 0;
-
-theta2 = -pi:0.1:pi;
-theta3 = -pi:0.1:pi;
-theta5 = -pi:0.1:pi;
-theta6 = -pi:0.1:pi;
-theta8 = -pi:0.1:pi;
-
-[THETA1,THETA2,THETA3,THETA4,THETA5,THETA6,THETA7,THETA8] 
-            = meshgrid(theta1,theta2,theta3,theta4,theta5,theta6,theta7,theta8);
+% R = get_robot();
+% 
+% % length of joints
+% l1 = extensions(1);
+% l4 = extensions(2);
+% l7 = extensions(7);
+% 
+% l2 = R.links(2);
+% l3 = R.links(3);
+% l5 = R.links(5);
+% l6 = R.links(6);
+% l8 = R.links(8);
+% 
+% % thetas possible values
+% theta1 = 0;
+% theta4 = 0;
+% theta7 = 0;
+% 
+% theta2 = -pi:0.1:pi;
+% theta3 = -pi:0.1:pi;
+% theta5 = -pi:0.1:pi;
+% theta6 = -pi:0.1:pi;
+% theta8 = -pi:0.1:pi;
+% 
+% [THETA1,THETA2,THETA3,THETA4,THETA5,THETA6,THETA7,THETA8] 
+%             = meshgrid(theta1,theta2,theta3,theta4,theta5,theta6,theta7,theta8);
 % 
 % q0=[0 0 0 0 0 0 0 0];
 % q1b=[3*pi .1745 pi/3 pi/2 .5236 pi/1.5 0 0];
@@ -49,6 +49,23 @@ theta8 = -pi:0.1:pi;
 % % R.links(7).qlim = [0, 2];
 % 
 % R.plot(traj1, 'workspace', [-10,10,-10,10,-10,10])
+
+x = [];
+y = [];
+z = [];
+Robot = get_robot();
+for theta5 = 0 : pi/6 : 2*pi
+    for theta6 = 0 : pi/6 : 2*pi
+        t = Robot.fkine([0 0 -pi/2 0 theta5 theta6 0 0]);
+        pos = t(:,4)
+        x(end + 1) = pos(1);
+        y(end + 1) = pos(2);
+        z(end + 1) = pos(3);
+    end
+end
+
+scatter3(x, y, z);
+plot_robot(Robot);
 
 end
 
