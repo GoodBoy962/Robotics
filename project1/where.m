@@ -15,9 +15,8 @@ end
 
 Robot.offset = extensions;
 transform_matrix = Robot.fkine(thetas);
-%Robot.A([1,2,3,4,5,6,7,8], extensions);
 
-Robot.plot([0,1,2,3,4,5,6,7], 'workspace', [-10,10,-10,10,-10,10]);
+Robot.plot(thetas, 'workspace', [-10,10,-10,10,-10,10]);
 
 Robot.teach();
 
